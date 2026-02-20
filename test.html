@@ -62,8 +62,6 @@
       document.getElementById("score").innerHTML = "Apples eaten: " + score;
     }
 
-    // Остальная часть кода остается прежней...
-
 function loop() {
   requestAnimationFrame(loop);
   if (++count < 4) {
@@ -75,7 +73,6 @@ function loop() {
   snake.x += snake.dx;
   snake.y += snake.dy;
 
-  // Проверяем столкновения со стенами и прекращаем игру
   if (
     snake.x < 0 ||
     snake.x >= canvas.width ||
@@ -138,8 +135,6 @@ function loop() {
   });
 }
 
-// Остальные части кода остаются неизменными...
-
     document.addEventListener('keydown', function (e) {
       if (e.which === 37 && snake.dx === 0) {
         snake.dx = -grid;
@@ -159,5 +154,6 @@ function loop() {
     requestAnimationFrame(loop);
   </script>
 </body>
+
 
 </html>
